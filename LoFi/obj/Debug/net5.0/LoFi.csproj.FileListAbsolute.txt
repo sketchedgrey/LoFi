@@ -1,0 +1,16 @@
+C:\Users\hunte\source\repos\LoFi\bin\Debug\net5.0\LoFi.exe
+C:\Users\hunte\source\repos\LoFi\bin\Debug\net5.0\LoFi.deps.json
+C:\Users\hunte\source\repos\LoFi\bin\Debug\net5.0\LoFi.runtimeconfig.json
+C:\Users\hunte\source\repos\LoFi\bin\Debug\net5.0\LoFi.runtimeconfig.dev.json
+C:\Users\hunte\source\repos\LoFi\bin\Debug\net5.0\LoFi.dll
+C:\Users\hunte\source\repos\LoFi\bin\Debug\net5.0\ref\LoFi.dll
+C:\Users\hunte\source\repos\LoFi\bin\Debug\net5.0\LoFi.pdb
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.csproj.AssemblyReference.cache
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.AssemblyInfoInputs.cache
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.AssemblyInfo.cs
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.csproj.CoreCompileInputs.cache
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.dll
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\ref\LoFi.dll
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.pdb
+C:\Users\hunte\source\repos\LoFi\obj\Debug\net5.0\LoFi.genruntimeconfig.cache

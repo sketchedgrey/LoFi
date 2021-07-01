@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <SignAssembly>false</SignAssembly>
+    <Authors>SketchedGrey</Authors>
+    <Product>LoFi Stress Tester</Product>
+    <Company>SketchedGrey</Company>
+    <Description>A simple themed stress tester for computers, networks, and firewalls. It utilizes a barage of UDP packets to attempt a small scale network based denial-of-service attack. It returns useful information such as TTL, RT, and the total amount of packets sent. For educational and non-malicious use only.</Description>
+    <Copyright>Copyright</Copyright>
+    <PackageIcon>Title.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryType>GitHub</RepositoryType>
+    <RepositoryUrl>https://github.com/sketchedgrey/LoFi</RepositoryUrl>
+    <PackageReleaseNotes>N/A</PackageReleaseNotes>
+    <PackageTags>stresser pinger cybersecurity lofi</PackageTags>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/sketchedgrey/LoFi</PackageProjectUrl>
+    <ApplicationIcon>Title.ico</ApplicationIcon>
+    <StartupObject>LoFi.Program</StartupObject>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId />
+    <Version>1.0</Version>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\OneDrive\Desktop\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\..\OneDrive\Pictures\Title.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
