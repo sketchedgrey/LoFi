@@ -22,7 +22,7 @@
     <StartupObject>LoFi.Program</StartupObject>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageId />
-    <Version>1.0</Version>
+    <Version>1.1</Version>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 

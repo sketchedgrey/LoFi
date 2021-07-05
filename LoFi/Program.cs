@@ -29,7 +29,7 @@ namespace LoFi
         private static string payload; // This variable is the input on how many bytes of data should be sent in a packet
         private static string delayer; // This variable handles the delay between packet launches
         private static string netport; // This variable handles the port number which should be attacked
-        private static string pingers; // This variable handles the delay between IMCP Echo requests.
+        private static string pingers; // This variable handles the delay between ICMP Echo requests.
 
         // Payload parsed value
         private static string parseload = "";
@@ -119,7 +119,7 @@ namespace LoFi
             IPEndPoint endpoint = new(IPAddress.Parse(address), int.Parse(netport));
 
             // Create integers used in attacking process
-            int i = 0; // Used for IMCP Echo control
+            int i = 0; // Used for ICMP Echo control
             int pluscolor = 1; // Used to controllm text color
             int packets = 0; // Used to count the total packets sent
 
