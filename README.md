@@ -3,6 +3,7 @@
 [![Build Status](https://img.shields.io/github/forks/sketchedgrey/LoFi.svg)](https://github.com/sketchedgrey/LoFi)
 [![Build Status](https://img.shields.io/github/stars/sketchedgrey/LoFi.svg)](https://github.com/sketchedgrey/LoFi)
 [![License](https://img.shields.io/github/license/sketchedgrey/LoFi.svg)](https://github.com/sketchedgrey/LoFi)
+[![License](https://img.shields.io/github/workflow/status/sketchedgrey/LoFi/.NET)](https://github.com/sketchedgrey/LoFi)
 
 ------------------------------------------------------------------------
 
