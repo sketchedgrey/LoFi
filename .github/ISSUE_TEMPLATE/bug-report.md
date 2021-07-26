@@ -8,7 +8,7 @@ assignees: ''
 
 ## **DETAILS**  
 
-### **ADITIONAL COMMENTS**
+### **ADDITIONAL COMMENTS**
   <!---
   Give additional comments and details in this section
   -->
