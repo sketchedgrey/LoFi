@@ -14,6 +14,6 @@ assignees: ''
   -->
 ### **BUG REPRODUCTION**
   <!---
-  Provide steps on how to reproduce the bug in this section.
+  Provide steps on how to reproduce the bug in this section
   -->
   
