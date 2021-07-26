@@ -14,4 +14,4 @@ LoFi is a network and firewall penetration testing/stressing software which send
 LoFi is a tool used for educational and penetration testing use ONLY. Committing cybercrime with this software is illegal and punishable under the applicable law. Do not use this program without mutual consent between the user and network/computer owner whose infrastructure is being tested. The copyright holder of this software is not responsible for any damage caused.
 
 ### License
-This program is licensed under the MIT License. See "LICENSE.md" for more information.
+This program is licensed under the MIT License. See "LICENSE" for more information.
