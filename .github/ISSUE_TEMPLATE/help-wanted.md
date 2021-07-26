@@ -8,8 +8,12 @@ assignees: ''
 
 ## **DETAILS**  
 
-### **ADITIONAL COMMENTS**
+### **ADDITIONAL COMMENTS**
   <!---
   Give additional comments and details in this section
   -->
   
+### **ASSIGNEE DETAILS**
+  <!---
+  Give details on the assignees' tasks
+  -->
