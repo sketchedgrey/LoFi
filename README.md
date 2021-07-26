@@ -17,7 +17,7 @@ LoFi is a tool used for educational and penetration testing use ONLY. Committing
 This program is licensed under the MIT License with "sketchedgrey" as the copyright holder. See "LICENSE" for more information.
 
 ### Checksums
-Below are the checksum hashes of the release binary .zip file.
-SHA-256: *insert hash here*
-MD5: *insert hash here*
-CRC-64 *insert hash here*
+Below are the checksum hashes of the compressed release binary file.  
+**SHA-256:** *insert hash here*  
+**CRC-64** *insert hash here*  
+**MD5:** *insert hash here*  
