@@ -1,6 +1,6 @@
 ---
 name: Enhancement
-about: Suggest enhancements to the program
+about: Suggest enhancements to the program here
 title: 'Enhancement: ___'
 labels: enhancement
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 
 ## **DETAILS**  
 
-### **ADITIONAL COMMENTS**
+### **ADDITIONAL COMMENTS**
   <!---
   Give additional comments and details in this section
   -->
